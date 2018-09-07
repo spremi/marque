@@ -1,0 +1,24 @@
+#
+# marque-server
+#
+
+#
+# Dependent modules
+#
+node_modules/
+
+#
+# Direcory containing compiled sources
+#
+build/
+
+#
+# IDE: VS Code specific
+#
+.vscode/*
+!.vscode/settings.json
+
+#
+# Log files
+#
+*.log
