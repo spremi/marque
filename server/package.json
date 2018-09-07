@@ -1,0 +1,26 @@
+{
+  "name": "marque-server",
+  "version": "0.0.1",
+  "description": "Local server for marque application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/spremi/marque.git"
+  },
+  "keywords": [
+    "bookmark",
+    "angular",
+    "express",
+    "expressjs",
+    "typescript"
+  ],
+  "author": "Sanjeev Premi",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/spremi/marque/issues"
+  },
+  "homepage": "https://github.com/spremi/marque#readme"
+}
