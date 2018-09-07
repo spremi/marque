@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/spremi/marque/issues"
   },
-  "homepage": "https://github.com/spremi/marque#readme"
+  "homepage": "https://github.com/spremi/marque#readme",
+  "devDependencies": {
+    "typescript": "^3.0.3"
+  }
 }
