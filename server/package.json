@@ -10,7 +10,9 @@
     "lint": "tslint -c tslint.json -p tslint.proj.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-tsc": "tsc -w",
+    "watch-debug": "DEBUG=express:* nodemon build/index.js",
     "watch-serve": "nodemon build/index.js",
+    "debug": "npm run lint && npm-run-all -p watch-tsc watch-debug",
     "develop": "npm run lint && npm-run-all -p watch-tsc watch-serve"
   },
   "repository": {
