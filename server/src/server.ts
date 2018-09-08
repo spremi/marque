@@ -11,6 +11,8 @@
 import bodyParser from 'body-parser';
 import express from 'express';
 
+import { appRoutes, IAppRoute } from './routes';
+
 /**
  * @class
  * Defines the application server.
@@ -99,7 +101,11 @@ export class Server {
   /**
    * Add 'api' routes
    */
-  private routes() {}
+  private routes() {
+    appRoutes.forEach((elem: IAppRoute) => {
+      this.app.use(elem.path, elem.router);
+    });
+  }
 }
 
 export default Server;
