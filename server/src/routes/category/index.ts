@@ -71,12 +71,51 @@ export class CategoryRoute {
   }
 
   /**
+   * Get list of bookmarks for specified category.
+   *
+   * @param req   Express request object.
+   * @param res   Express response object.
+   * @param next  Next method to execute.
+   *
+   * @returns     An array of category objects
+   */
+  public bookmarks(req: Request, res: Response, next: NextFunction) {
+    const db = appDB.get();
+
+    if (!db) {
+      res.status(500).send('Database object is null');
+      return;
+    }
+
+    if (!req.params.catId) {
+      res.status(500).send('No category was specified');
+      return;
+    }
+
+    const catId = req.params.catId;
+
+    //
+    // TODO: For now, skip checking for valid category Id
+    //
+
+    const result = db.getData('/bookmarks/' + catId + '/list');
+
+    //
+    // Create array from the object based on keys
+    //
+    const ret = Object.keys(result).map((key) => result[key]);
+
+    res.status(200).send(ret);
+  }
+
+  /**
    * Add endpoints and return router instance.
    *
    * @returns An instance of this router
    */
   public open(): Router {
     this.router.get('/', this.index);
+    this.router.get('/:catId/bookmark', this.bookmarks);
 
     return this.router;
   }
