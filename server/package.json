@@ -4,6 +4,7 @@
   "description": "Local server for marque application",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf build/*",
     "build": "npm run lint && npm run tsc",
     "serve": "NODE_ENV=production node build/index.js",
     "tsc": "tsc",
