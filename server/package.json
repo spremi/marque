@@ -4,6 +4,7 @@
   "description": "Local server for marque application",
   "main": "index.js",
   "scripts": {
+    "build": "npm run lint && npm run tsc",
     "tsc": "tsc",
     "lint": "tslint -c tslint.json -p tslint.proj.json",
     "test": "echo \"Error: no test specified\" && exit 1"
