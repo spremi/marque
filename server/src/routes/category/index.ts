@@ -10,6 +10,8 @@
 //
 import { NextFunction, Request, Response, Router } from 'express';
 
+import appDB from '../../data';
+
 export class CategoryRoute {
   /**
    * Create an instance of this class
@@ -47,9 +49,25 @@ export class CategoryRoute {
    * @param req   Express request object.
    * @param res   Express response object.
    * @param next  Next method to execute.
+   *
+   * @returns     An array of category objects
    */
   public index(req: Request, res: Response, next: NextFunction) {
-    res.status(200).send({});
+    const db = appDB.get();
+
+    if (!db) {
+      res.status(500).send('Database object is null');
+      return;
+    }
+
+    const data = db.getData('/categories');
+
+    //
+    // Create array from the object based on keys
+    //
+    const ret = Object.keys(data).map((key) => data[key]);
+
+    res.status(200).send(ret);
   }
 
   /**
