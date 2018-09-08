@@ -68,6 +68,21 @@ export class Server {
    */
   private config() {
     //
+    // Enable CORS in development environment
+    //
+    if (this.mode === Server.MODE_DEVELOPMENT) {
+      this.app.use((req, res, next) => {
+        res.header('Access-Control-Allow-Origin', '*');
+        res.header(
+          'Access-Control-Allow-Headers',
+          'Origin, X-Requested-With, Content-Type, Accept',
+        );
+
+        next();
+      });
+    }
+
+    //
     // Add static paths
     //
     this.app.use('/', express.static('./public'));
