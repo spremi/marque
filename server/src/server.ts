@@ -8,6 +8,7 @@
 // SPDX-License-Identifier: BSD-3-Clause
 //                          (http://spdx.org/licenses/BSD-3-Clause.html)
 //
+import bodyParser from 'body-parser';
 import express from 'express';
 
 /**
@@ -65,7 +66,20 @@ export class Server {
   /**
    * Configure the server
    */
-  private config() {}
+  private config() {
+    //
+    // Add static paths
+    //
+    this.app.use('/', express.static('./public'));
+    this.app.use('/assets', express.static('./assets'));
+
+    //
+    // Use body parser middleware
+    // Accept both JSON and url encoded values
+    //
+    this.app.use(bodyParser.json());
+    this.app.use(bodyParser.urlencoded({ extended: true }));
+  }
 
   /**
    * Add 'api' routes
