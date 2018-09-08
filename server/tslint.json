@@ -1,0 +1,18 @@
+{
+  "extends": ["tslint:recommended", "tslint-immutable"],
+  "rules": {
+    "quotemark": [true,
+      "single",
+      "avoid-escape"
+    ],
+    "no-empty": [true,
+      "allow-empty-catch",
+      "allow-empty-functions"
+    ]
+  },
+  "linterOptions": {
+    "exclude" : [
+      "./node_modules/**"
+    ]
+  }
+}

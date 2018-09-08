@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
+    "lint": "tslint -c tslint.json -p tslint.proj.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
