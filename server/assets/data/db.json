@@ -1,0 +1,160 @@
+{
+    "categories": {
+        "c01": {
+            "id": "c01",
+            "icon": "apps",
+            "name": "Category 1",
+            "desc": "Description for category 1"
+        },
+        "c02": {
+            "id": "c02",
+            "icon": "cloud",
+            "name": "Category 2",
+            "desc": "Description for category 3"
+        },
+        "c03": {
+            "id": "c03",
+            "icon": "favorite",
+            "name": "Category 3",
+            "desc": "Description for category 3"
+        },
+        "c04": {
+            "id": "c04",
+            "icon": "spa",
+            "name": "Category 4",
+            "desc": "Description for category 4"
+        }
+    },
+    "icons": [
+      {
+        "name": "apps",
+        "link": "/assets/icons/ic_apps_48px.svg"
+      },
+      {
+        "name": "cloud",
+        "link": "/assets/icons/ic_cloud_48px.svg"
+      },
+      {
+        "name": "favorite",
+        "link": "/assets/icons/ic_favorite_48px.svg"
+      },
+      {
+        "name": "spa",
+        "link": "/assets/icons/ic_spa_48px.svg"
+      }
+    ],
+    "bookmarks": {
+        "c01": {
+            "list": [
+                {
+                    "id": "b11",
+                    "link": "https://google.com",
+                    "name": "Link B11",
+                    "desc": "Description for bookmark b11"
+                },
+                {
+                    "id": "b12",
+                    "link": "https://github.com",
+                    "name": "Link B12",
+                    "desc": "Description for bookmark b12"
+                },
+                {
+                    "id": "b13",
+                    "link": "https://github.com/spremi",
+                    "name": "Link B13",
+                    "desc": "Description for bookmark b13"
+                },
+                {
+                    "id": "b14",
+                    "link": "https://angular.io/",
+                    "name": "Link B14",
+                    "desc": "Description for bookmark b14"
+                }
+            ]
+        },
+        "c02": {
+            "list": [
+                {
+                    "id": "b21",
+                    "link": "https://google.com",
+                    "name": "Link B21",
+                    "desc": "Description for bookmark b21"
+                },
+                {
+                    "id": "b22",
+                    "link": "https://github.com",
+                    "name": "Link B22",
+                    "desc": "Description for bookmark b22"
+                },
+                {
+                    "id": "b23",
+                    "link": "https://github.com/spremi",
+                    "name": "Link B23",
+                    "desc": "Description for bookmark b23"
+                },
+                {
+                    "id": "b24",
+                    "link": "https://angular.io/",
+                    "name": "Link B24",
+                    "desc": "Description for bookmark b24"
+                }
+            ]
+        },
+        "c03": {
+            "list": [
+                {
+                    "id": "b31",
+                    "name": "Link B31",
+                    "link": "https://google.com",
+                    "desc": "Description for bookmark b31"
+                },
+                {
+                    "id": "b32",
+                    "link": "https://github.com",
+                    "name": "Link B32",
+                    "desc": "Description for bookmark b32"
+                },
+                {
+                    "id": "b33",
+                    "link": "https://github.com/spremi",
+                    "name": "Link B33",
+                    "desc": "Description for bookmark b33"
+                },
+                {
+                    "id": "b34",
+                    "link": "https://angular.io/",
+                    "name": "Link B34",
+                    "desc": "Description for bookmark b34"
+                }
+            ]
+        },
+        "c04": {
+            "list": [
+                {
+                    "id": "b41",
+                    "link": "https://google.com",
+                    "name": "Link B41",
+                    "desc": "Description for bookmark b41"
+                },
+                {
+                    "id": "b42",
+                    "link": "https://github.com",
+                    "name": "Link B42",
+                    "desc": "Description for bookmark b42"
+                },
+                {
+                    "id": "b43",
+                    "link": "https://github.com/spremi",
+                    "name": "Link B43",
+                    "desc": "Description for bookmark b43"
+                },
+                {
+                    "id": "b44",
+                    "link": "https://angular.io/",
+                    "name": "Link B44",
+                    "desc": "Description for bookmark b44"
+                }
+            ]
+        }
+    }
+}
