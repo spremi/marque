@@ -16,6 +16,7 @@ import { HeaderComponent } from './elements/header/header.component';
 import { HintComponent } from './elements/hint/hint.component';
 import { LicenseComponent } from './elements/license/license.component';
 import { DataService } from './services/data.service';
+import { HintService } from './services/hint.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { DataService } from './services/data.service';
     LicenseComponent,
   ],
   imports: [BrowserModule, HttpClientModule],
-  providers: [DataService],
+  providers: [DataService, HintService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
