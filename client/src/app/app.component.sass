@@ -1,0 +1,35 @@
+//
+// Initial width of the category list
+//
+$initial-cat-width: 240px
+
+\:host
+  height: 100vh
+
+  display: flex
+  flex-direction: column
+
+  .content
+    display: block
+    min-height: 0
+    flex: 1
+    overflow: auto
+    position: relative
+
+    .categories
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      width: $initial-cat-width
+      overflow-x: auto
+      transition: all 250ms ease-in-out
+
+    .bookmarks
+      position: absolute
+      top: 0
+      left: $initial-cat-width
+      bottom: 0
+      right: 0px
+      overflow-x: auto
+      transition: all 250ms ease-in-out
