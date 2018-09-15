@@ -17,6 +17,7 @@ import { HintComponent } from './elements/hint/hint.component';
 import { LicenseComponent } from './elements/license/license.component';
 import { DataService } from './services/data.service';
 import { HintService } from './services/hint.service';
+import { LicenseService } from './services/license.service';
 import { SelectService } from './services/select.service';
 
 @NgModule({
@@ -32,7 +33,7 @@ import { SelectService } from './services/select.service';
     LicenseComponent,
   ],
   imports: [BrowserModule, HttpClientModule],
-  providers: [DataService, HintService, SelectService],
+  providers: [DataService, HintService, SelectService, LicenseService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
