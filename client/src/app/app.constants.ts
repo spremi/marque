@@ -40,4 +40,10 @@ export class AppConst {
    * @constant
    */
   static readonly RES_LICENSE = 'license';
+
+  /**
+   * Link to default icon.
+   * @constant
+   */
+  static readonly DEFAULT_ICON = '/assets/icons/category/ic_folder_48px.svg';
 }
