@@ -1,3 +1,7 @@
-<p>
-  category works!
-</p>
+<ng-container *ngIf="cat !== null">
+  <div class="cat-icon">
+    <img [src]="cat.icon" />
+  </div>
+  <div class="cat-name">{{cat.name}}</div>
+  <div *ngIf="!selected" class="cat-link" (click)="onSelect()">GO</div>
+</ng-container>
