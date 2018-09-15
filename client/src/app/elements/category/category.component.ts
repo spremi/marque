@@ -7,6 +7,7 @@ import {
   OnInit,
 } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { AppConst } from 'src/app/app.constants';
 
 import { Category } from '../../models/category';
 import { HintService } from '../../services/hint.service';
@@ -44,6 +45,10 @@ export class CategoryComponent implements OnInit, OnDestroy {
 
   onSelect() {
     this.selectSvc.set(this.cat);
+  }
+
+  onError(ev: Event) {
+    this.cat.icon = AppConst.DEFAULT_ICON;
   }
 
   @HostListener('mouseover')

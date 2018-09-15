@@ -1,6 +1,6 @@
 <ng-container *ngIf="cat !== null">
   <div class="cat-icon">
-    <img [src]="cat.icon" />
+    <img [src]="cat.icon" (error)="onError($event)"/>
   </div>
   <div class="cat-name">{{cat.name}}</div>
   <div *ngIf="!selected" class="cat-link" (click)="onSelect()">GO</div>
