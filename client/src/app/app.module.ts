@@ -13,6 +13,7 @@ import {
 import { CategoryComponent } from './elements/category/category.component';
 import { FooterComponent } from './elements/footer/footer.component';
 import { HeaderComponent } from './elements/header/header.component';
+import { HintComponent } from './elements/hint/hint.component';
 import { DataService } from './services/data.service';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { DataService } from './services/data.service';
     CategoryComponent,
     BookmarkListComponent,
     CategoryListComponent,
+    HintComponent,
   ],
   imports: [BrowserModule, HttpClientModule],
   providers: [DataService],
