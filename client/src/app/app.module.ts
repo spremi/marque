@@ -7,6 +7,9 @@ import {
   BookmarkListComponent,
 } from './elements/bookmark-list/bookmark-list.component';
 import { BookmarkComponent } from './elements/bookmark/bookmark.component';
+import {
+  CategoryListComponent,
+} from './elements/category-list/category-list.component';
 import { CategoryComponent } from './elements/category/category.component';
 import { FooterComponent } from './elements/footer/footer.component';
 import { HeaderComponent } from './elements/header/header.component';
@@ -20,6 +23,7 @@ import { DataService } from './services/data.service';
     BookmarkComponent,
     CategoryComponent,
     BookmarkListComponent,
+    CategoryListComponent,
   ],
   imports: [BrowserModule, HttpClientModule],
   providers: [DataService],
