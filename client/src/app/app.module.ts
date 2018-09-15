@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import {
+  BookmarkListComponent,
+} from './elements/bookmark-list/bookmark-list.component';
 import { BookmarkComponent } from './elements/bookmark/bookmark.component';
 import { CategoryComponent } from './elements/category/category.component';
 import { FooterComponent } from './elements/footer/footer.component';
@@ -16,6 +19,7 @@ import { DataService } from './services/data.service';
     FooterComponent,
     BookmarkComponent,
     CategoryComponent,
+    BookmarkListComponent,
   ],
   imports: [BrowserModule, HttpClientModule],
   providers: [DataService],
