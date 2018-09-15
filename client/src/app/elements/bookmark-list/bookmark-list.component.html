@@ -1,3 +1,6 @@
-<p>
-  bookmark-list works!
-</p>
+<h3>BOOKMARKS</h3>
+<ul>
+  <li *ngFor="let item of list">
+    <sp-bookmark [bm]="item"></sp-bookmark>
+  </li>
+</ul>
