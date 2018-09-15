@@ -1,0 +1,62 @@
+@import 'src/style/sizes.sass'
+
+\:host
+  display: block
+  width: $size-category-w
+  height: $size-category-h
+  position: relative
+
+  box-sizing: border-box
+
+  background-color: lightslategray
+
+  a
+    text-decoration: none
+    outline: 0
+
+    &:hover
+    &:active
+    a:focus
+      outline: 0
+
+  .bm-name
+    position: absolute
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    width: 100%
+    height: 100%
+
+    box-sizing: border-box
+
+    font-size: 16px
+    font-weight: 600
+
+    z-index: 10
+    transition: height 400ms ease-in-out
+
+    background-color: slategray
+
+  .bm-link
+    position: absolute
+
+    display: inline-block
+
+    bottom: 8px
+    right: 8px
+
+    padding: 4px
+
+    box-sizing: border-box
+
+    font-size: 16px
+    font-weight: 500
+
+    &:hover
+      cursor: pointer
+
+  &:hover
+    .bm-name
+      height: $size-category-h - 48px

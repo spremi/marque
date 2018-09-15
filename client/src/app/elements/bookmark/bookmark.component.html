@@ -1,3 +1,5 @@
-<p>
-  bookmark works!
-</p>
+<ng-container *ngIf="bm !== null">
+  <div class="bm-name">{{bm.name}}</div>
+  <a class="bm-link"
+    [href]="bm.link" target="_blank">GO</a>
+</ng-container>
