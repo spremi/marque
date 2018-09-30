@@ -1,0 +1,22 @@
+{
+  "name": "marque-bundle",
+  "version": "0.0.1",
+  "description": "Bundle the client & server packages together",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/spremi/marque.git"
+  },
+  "keywords": [
+    "bookmark",
+    "angular",
+    "express",
+    "expressjs",
+    "typescript"
+  ],
+  "author": "Sanjeev Premi",
+  "license": "BSD-3-Clause"
+}
