@@ -18,5 +18,8 @@
     "typescript"
   ],
   "author": "Sanjeev Premi",
-  "license": "BSD-3-Clause"
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "grunt": "^1.0.3"
+  }
 }
