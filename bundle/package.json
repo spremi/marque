@@ -20,6 +20,7 @@
   "author": "Sanjeev Premi",
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "grunt": "^1.0.3"
+    "grunt": "^1.0.3",
+    "load-grunt-tasks": "^4.0.0"
   }
 }
