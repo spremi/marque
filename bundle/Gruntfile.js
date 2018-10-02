@@ -80,6 +80,10 @@ module.exports = function (grunt) {
         level: 'level3',
         text: 'Install runtime dependencies'
       },
+      assemble_pkg: {
+        level: 'level3',
+        text: 'Update package.json'
+      },
     },
 
     shell: {
@@ -162,6 +166,25 @@ module.exports = function (grunt) {
         ]
       }
     },
+
+    modify_json: {
+      options: {
+        indent: 2,
+      },
+      assemble_pkg: {
+        options: {
+          fields: {
+            devDependencies: {},
+            scripts: {
+              serve: 'NODE_ENV=production node index.js',
+            }
+          },
+        },
+        files: {
+          './<%= dir.assemble %>/package.json': './<%= dir.assemble %>/package.json',
+        }
+      },
+    },
   });
 
   //
@@ -228,6 +251,8 @@ module.exports = function (grunt) {
     'copy:server_assets',
     'banner:assemble_deps',
     'shell:assemble_deps',
+    'banner:assemble_pkg',
+    'modify_json:assemble_pkg',
   ]);
 
   //
