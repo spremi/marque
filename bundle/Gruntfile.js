@@ -28,6 +28,7 @@ module.exports = function (grunt) {
     dir: {
       client: 'client',
       server: 'server',
+      assemble: 'assemble',
     },
 
     banner: {
@@ -60,6 +61,10 @@ module.exports = function (grunt) {
         level: 'level3',
         text: 'Build'
       },
+      assemble_dir: {
+        level: 'level3',
+        text: 'Create necessary directories'
+      },
     },
 
     shell: {
@@ -84,6 +89,14 @@ module.exports = function (grunt) {
           'npm run build',
           'popd',
         ].join('&&')
+      },
+    },
+
+    mkdir: {
+      assemble: {
+        options: {
+          create: ['assemble', 'assemble/public']
+        }
       },
     },
   });
@@ -143,6 +156,8 @@ module.exports = function (grunt) {
   //
   grunt.registerTask('assemble', [
     'banner:assemble',
+    'banner:assemble_dir',
+    'mkdir:assemble',
   ]);
 
   //
