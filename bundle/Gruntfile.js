@@ -77,6 +77,14 @@ module.exports = function (grunt) {
           'popd',
         ].join('&&')
       },
+      server_build: {
+        command: [
+          'pushd ../<%= dir.server %>',
+          'npm run clean',
+          'npm run build',
+          'popd',
+        ].join('&&')
+      },
     },
   });
 
@@ -127,6 +135,7 @@ module.exports = function (grunt) {
   //
   grunt.registerTask('server', [
     'banner:server',
+    'shell:server_build'
   ]);
 
   //
