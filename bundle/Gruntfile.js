@@ -30,6 +30,8 @@ module.exports = function (grunt) {
       server: 'server',
       assemble: 'assemble',
       client_dist: '<%= dir.client %>/dist/<%= pkg_client.name %>',
+      server_dist: '<%= dir.server %>/build',
+      server_assets: '<%= dir.server %>/assets',
     },
 
     banner: {
@@ -69,6 +71,10 @@ module.exports = function (grunt) {
       assemble_client: {
         level: 'level3',
         text: 'Copy client distribution'
+      },
+      assemble_server: {
+        level: 'level3',
+        text: 'Copy server distribution'
       },
     },
 
@@ -112,6 +118,38 @@ module.exports = function (grunt) {
         src: ['**'],
         dest: './<%= dir.assemble %>/public/',
       },
+      server_dist: {
+        files: [
+          {
+            expand: true,
+            cwd: '../<%= dir.server %>',
+            src: ['package.json', 'package-lock.json'],
+            dest: './<%= dir.assemble %>/',
+          },
+          {
+            expand: true,
+            cwd: '../<%= dir.server_dist %>',
+            src: ['**', '!node_modules/**'],
+            dest: './<%= dir.assemble %>/',
+          },
+        ]
+      },
+      server_assets: {
+        files: [
+          {
+            expand: true,
+            cwd: '../<%= dir.server_assets %>',
+            src: ['icons/**', 'license.html'],
+            dest: './<%= dir.assemble %>/resources',
+          },
+          {
+            expand: true,
+            cwd: '../<%= dir.server_assets %>/data',
+            src: ['**'],
+            dest: './<%= dir.assemble %>/data',
+          },
+        ]
+      }
     },
   });
 
@@ -174,6 +212,9 @@ module.exports = function (grunt) {
     'mkdir:assemble',
     'banner:assemble_client',
     'copy:client_dist',
+    'banner:assemble_server',
+    'copy:server_dist',
+    'copy:server_assets',
   ]);
 
   //
