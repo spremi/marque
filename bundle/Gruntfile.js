@@ -29,6 +29,7 @@ module.exports = function (grunt) {
       client: 'client',
       server: 'server',
       assemble: 'assemble',
+      client_dist: '<%= dir.client %>/dist/<%= pkg_client.name %>',
     },
 
     banner: {
@@ -65,6 +66,10 @@ module.exports = function (grunt) {
         level: 'level3',
         text: 'Create necessary directories'
       },
+      assemble_client: {
+        level: 'level3',
+        text: 'Copy client distribution'
+      },
     },
 
     shell: {
@@ -97,6 +102,15 @@ module.exports = function (grunt) {
         options: {
           create: ['assemble', 'assemble/public']
         }
+      },
+    },
+
+    copy: {
+      client_dist: {
+        expand: true,
+        cwd: '../<%= dir.client_dist %>',
+        src: ['**'],
+        dest: './<%= dir.assemble %>/public/',
       },
     },
   });
@@ -158,6 +172,8 @@ module.exports = function (grunt) {
     'banner:assemble',
     'banner:assemble_dir',
     'mkdir:assemble',
+    'banner:assemble_client',
+    'copy:client_dist',
   ]);
 
   //
