@@ -52,6 +52,31 @@ module.exports = function (grunt) {
         level: 'level2',
         text: 'Assembling components'
       },
+      client_lint: {
+        level: 'level3',
+        text: 'Lint'
+      },
+      client_build: {
+        level: 'level3',
+        text: 'Build'
+      },
+    },
+
+    shell: {
+      client_lint: {
+        command: [
+          'pushd ../<%= dir.client %>',
+          'ng lint',
+          'popd',
+        ].join('&&')
+      },
+      client_build: {
+        command: [
+          'pushd ../<%= dir.client %>',
+          'ng build --prod --aot',
+          'popd',
+        ].join('&&')
+      },
     },
   });
 
@@ -91,6 +116,10 @@ module.exports = function (grunt) {
   //
   grunt.registerTask('client', [
     'banner:client',
+    'banner:client_lint',
+    'shell:client_lint',
+    'banner:client_build',
+    'shell:client_build'
   ]);
 
   //
