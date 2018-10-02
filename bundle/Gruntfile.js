@@ -84,6 +84,10 @@ module.exports = function (grunt) {
         level: 'level3',
         text: 'Update package.json'
       },
+      assemble_tar: {
+        level: 'level3',
+        text: 'Create marque.tar.gz'
+      },
     },
 
     shell: {
@@ -185,6 +189,19 @@ module.exports = function (grunt) {
         }
       },
     },
+
+    compress: {
+      assemble: {
+        options: {
+          mode: 'tgz',
+          archive: 'out/marque.tgz'
+        },
+        expand: true,
+        cwd: './<%= dir.assemble %>/',
+        src: ['**/*'],
+        dest: 'marque/',
+      },
+    },
   });
 
   //
@@ -253,6 +270,8 @@ module.exports = function (grunt) {
     'shell:assemble_deps',
     'banner:assemble_pkg',
     'modify_json:assemble_pkg',
+    'banner:assemble_tar',
+    'compress:assemble'
   ]);
 
   //
