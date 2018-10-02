@@ -76,6 +76,10 @@ module.exports = function (grunt) {
         level: 'level3',
         text: 'Copy server distribution'
       },
+      assemble_deps: {
+        level: 'level3',
+        text: 'Install runtime dependencies'
+      },
     },
 
     shell: {
@@ -98,6 +102,13 @@ module.exports = function (grunt) {
           'pushd ../<%= dir.server %>',
           'npm run clean',
           'npm run build',
+          'popd',
+        ].join('&&')
+      },
+      assemble_deps: {
+        command: [
+          'pushd <%= dir.assemble %>',
+          'npm install --production',
           'popd',
         ].join('&&')
       },
@@ -215,6 +226,8 @@ module.exports = function (grunt) {
     'banner:assemble_server',
     'copy:server_dist',
     'copy:server_assets',
+    'banner:assemble_deps',
+    'shell:assemble_deps',
   ]);
 
   //
