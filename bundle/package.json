@@ -21,6 +21,7 @@
   "license": "BSD-3-Clause",
   "devDependencies": {
     "grunt": "^1.0.3",
+    "grunt-contrib-compress": "^1.4.3",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-mkdir": "^1.0.0",
     "grunt-modify-json": "^0.1.3",
