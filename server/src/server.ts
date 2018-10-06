@@ -88,7 +88,7 @@ export class Server {
     // Add static paths
     //
     this.app.use('/', express.static('./public'));
-    this.app.use('/assets', express.static('./assets'));
+    this.app.use('/icons', express.static('./assets/icons'));
 
     //
     // Use body parser middleware
