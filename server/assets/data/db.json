@@ -28,19 +28,19 @@
     "icons": [
       {
         "name": "apps",
-        "link": "/assets/icons/ic_apps_48px.svg"
+        "link": "/icons/ic_apps_48px.svg"
       },
       {
         "name": "cloud",
-        "link": "/assets/icons/ic_cloud_48px.svg"
+        "link": "/icons/ic_cloud_48px.svg"
       },
       {
         "name": "favorite",
-        "link": "/assets/icons/ic_favorite_48px.svg"
+        "link": "/icons/ic_favorite_48px.svg"
       },
       {
         "name": "spa",
-        "link": "/assets/icons/ic_spa_48px.svg"
+        "link": "/icons/ic_spa_48px.svg"
       }
     ],
     "bookmarks": {
