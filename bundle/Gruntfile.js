@@ -190,6 +190,22 @@ module.exports = function (grunt) {
       },
     },
 
+    'string-replace': {
+      bundle: {
+        files: {
+          './<%= dir.assemble %>/aura.js': './<%= dir.assemble %>/aura.js',
+        },
+        options: {
+          replacements: [
+            {
+              pattern: 'Aura.IN_BUNDLE = false;',
+              replacement: 'Aura.IN_BUNDLE = true;',
+            }
+          ]
+        }
+      }
+    },
+
     compress: {
       assemble: {
         options: {
@@ -270,6 +286,7 @@ module.exports = function (grunt) {
     'shell:assemble_deps',
     'banner:assemble_pkg',
     'modify_json:assemble_pkg',
+    'string-replace:bundle',
     'banner:assemble_tar',
     'compress:assemble'
   ]);
