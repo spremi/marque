@@ -9,11 +9,11 @@
 //                          (http://spdx.org/licenses/BSD-3-Clause.html)
 //
 import JsonDB from 'node-json-db';
+import * as path from 'path';
 
-/**
- * Path to JSON file used as application database.
- */
-const APP_DATA_FILE = 'assets/data/db.json';
+import Aura from './aura';
+
+const DB_FILE = path.resolve(Aura.DB_FILE);
 
 /**
  * @class
@@ -50,7 +50,7 @@ export class AppDB {
    * Private constructor
    */
   private constructor() {
-    this.db = new JsonDB(APP_DATA_FILE, true, true);
+    this.db = new JsonDB(DB_FILE, true, true);
   }
 
   /**
