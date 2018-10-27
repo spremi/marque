@@ -11,6 +11,7 @@
 import bodyParser from 'body-parser';
 import express from 'express';
 
+import { Aura } from './aura';
 import { appRoutes, IAppRoute } from './routes';
 
 /**
@@ -18,20 +19,6 @@ import { appRoutes, IAppRoute } from './routes';
  * Defines the application server.
  */
 export class Server {
-  /**
-   * Server is running in 'development' mode.
-   *
-   * @constant
-   */
-  public static readonly MODE_DEVELOPMENT = 'development';
-
-  /**
-   * Server is running in 'production' mode.
-   *
-   * @constant
-   */
-  public static readonly MODE_PRODUCTION = 'production';
-
   /**
    * Create an instance of application server
    *
@@ -72,7 +59,7 @@ export class Server {
     //
     // Enable CORS in development environment
     //
-    if (this.mode === Server.MODE_DEVELOPMENT) {
+    if (this.mode === Aura.DEVELOPMENT) {
       this.app.use((req, res, next) => {
         res.header('Access-Control-Allow-Origin', '*');
         res.header(
@@ -88,7 +75,7 @@ export class Server {
     // Add static paths
     //
     this.app.use('/', express.static('./public'));
-    this.app.use('/icons', express.static('./assets/icons'));
+    this.app.use('/icons', express.static(Aura.ICONS_DIR));
 
     //
     // Use body parser middleware
