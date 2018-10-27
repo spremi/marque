@@ -11,7 +11,9 @@
 import { NextFunction, Request, Response, Router } from 'express';
 import * as path from 'path';
 
-const LICENSE_FILE = path.resolve('assets/license.html');
+import { Aura } from '../../aura';
+
+const LICENSE_FILE = path.resolve(Aura.LICENSE_FILE);
 
 export class LicenseRoute {
   /**
