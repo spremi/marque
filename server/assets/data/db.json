@@ -31,16 +31,84 @@
         "link": "/icons/ic_apps_48px.svg"
       },
       {
+        "name": "audiotrack",
+        "link": "/icons/ic_audiotrack_48px.svg"
+      },
+      {
+        "name": "camera",
+        "link": "/icons/ic_camera_48px.svg"
+      },
+      {
         "name": "cloud",
         "link": "/icons/ic_cloud_48px.svg"
+      },
+      {
+        "name": "credit_card",
+        "link": "/icons/ic_credit_card_48px.svg"
       },
       {
         "name": "favorite",
         "link": "/icons/ic_favorite_48px.svg"
       },
       {
+        "name": "flight",
+        "link": "/icons/ic_flight_48px.svg"
+      },
+      {
+        "name": "folder",
+        "link": "/icons/ic_folder_48px.svg"
+      },
+      {
+        "name": "language",
+        "link": "/icons/ic_language_48px.svg"
+      },
+      {
+        "name": "link",
+        "link": "/icons/ic_link_48px.svg"
+      },
+      {
+        "name": "location_on",
+        "link": "/icons/ic_location_on_48px.svg"
+      },
+      {
+        "name": "movie",
+        "link": "/icons/ic_movie_48px.svg"
+      },
+      {
+        "name": "person",
+        "link": "/icons/ic_person_48px.svg"
+      },
+      {
+        "name": "restaurant",
+        "link": "/icons/ic_restaurant_48px.svg"
+      },
+      {
+        "name": "school",
+        "link": "/icons/ic_school_48px.svg"
+      },
+      {
+        "name": "security",
+        "link": "/icons/ic_security_48px.svg"
+      },
+      {
+        "name": "share",
+        "link": "/icons/ic_share_48px.svg"
+      },
+      {
         "name": "spa",
         "link": "/icons/ic_spa_48px.svg"
+      },
+      {
+        "name": "verified_user",
+        "link": "/icons/ic_verified_user_48px.svg"
+      },
+      {
+        "name": "vpn_key",
+        "link": "/icons/ic_vpn_key_48px.svg"
+      },
+      {
+        "name": "work",
+        "link": "/icons/ic_work_48px.svg"
       }
     ],
     "bookmarks": {
