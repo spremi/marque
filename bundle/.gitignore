@@ -1,0 +1,25 @@
+#
+# marque-bundle
+#
+
+#
+# Dependent modules
+#
+node_modules/
+
+#
+# Direcory containing assembled sources
+#
+assemble/
+out/
+
+#
+# IDE: VS Code specific
+#
+.vscode/*
+!.vscode/settings.json
+
+#
+# Log files
+#
+*.log
