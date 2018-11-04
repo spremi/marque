@@ -24,6 +24,7 @@ module.exports = function (grunt) {
 
     pkg_client: grunt.file.readJSON('../client/package.json'),
     pkg_server: grunt.file.readJSON('../server/package.json'),
+    summary: grunt.file.readJSON('../summary.json'),
 
     dir: {
       client: 'client',
@@ -210,7 +211,7 @@ module.exports = function (grunt) {
       assemble: {
         options: {
           mode: 'tgz',
-          archive: 'out/marque.tgz'
+          archive: 'out/<%= summary.name %>-v<%= summary.version %>.tgz'
         },
         expand: true,
         cwd: './<%= dir.assemble %>/',
