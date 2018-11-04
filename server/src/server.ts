@@ -10,6 +10,7 @@
 //
 import bodyParser from 'body-parser';
 import express from 'express';
+import helmet from 'helmet';
 
 import { Aura } from './aura';
 import { appRoutes, IAppRoute } from './routes';
@@ -56,6 +57,8 @@ export class Server {
    * Configure the server
    */
   private config() {
+    this.app.use(helmet());
+
     //
     // Enable CORS in development environment
     //
